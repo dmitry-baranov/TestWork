@@ -1,3 +1,4 @@
+import java.lang.Object;
 public class Util {
 
     // Метод создает list уникальных значений Country
@@ -17,7 +18,12 @@ public class Util {
         for (int i = 1; i < list.length(); i++) {
             if (list.get(i) != null && !list.get(i).equals("user_id;count;country")) {
                 String[] arr = list.get(i).split(";");
-                userMyList.add(new User(arr[0],Integer.parseInt(arr[1]),arr[2]));
+
+
+                    userMyList.add(new User(arr[0],Integer.parseInt(arr[1]),arr[2]));
+
+
+
             }
         }
         return  userMyList;

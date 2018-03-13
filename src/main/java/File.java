@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class File {
 
@@ -10,6 +12,10 @@ public class File {
             MyList<String> list = new MyList<String>();
             fileInputStream.getChannel().position(0);
             while ((strLine = br.readLine()) != null){
+                String re1="(\\d+)(;)(\\d+(;))((?:[a-z][a-z]+))";
+                Pattern p = Pattern.compile(re1,Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
+                Matcher m = p.matcher(strLine);
+                if (m.find())
                 list.add(strLine);
             }
             return list;
