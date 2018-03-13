@@ -1,0 +1,5 @@
+Ukraine;2;2
+Russia;6;1
+Отсортированный 
+Russia;6;1
+Ukraine;2;2
