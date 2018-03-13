@@ -18,10 +18,12 @@ public class Util {
         for (int i = 1; i < list.length(); i++) {
             if (list.get(i) != null && !list.get(i).equals("user_id;count;country")) {
                 String[] arr = list.get(i).split(";");
-
-
-                    userMyList.add(new User(arr[0],Integer.parseInt(arr[1]),arr[2]));
-
+                try {
+                    Math.incrementExact(Integer.parseInt(arr[1]) - 1);
+                    Math.incrementExact(Integer.parseInt(arr[0]) - 1);
+                    userMyList.add(new User(arr[0], Integer.parseInt(arr[1]), arr[2]));
+                } catch (ArithmeticException ignore) {
+                }
 
 
             }

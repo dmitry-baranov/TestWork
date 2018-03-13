@@ -1,5 +1,3 @@
-Ukraine;11;11
 Russia;12;2
 Отсортированный 
-Ukraine;11;11
 Russia;12;2
