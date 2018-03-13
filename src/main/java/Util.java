@@ -42,13 +42,13 @@ public class Util {
     public static void sortListUser(MyList<Country> list) {
         for (int i = list.length() - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (list.get(i) != null && list.get(i).getName() != null && list.get(j).getCountUser() > list.get(j + 1).getCountUser()) {
+                if (list.get(j + 1) != null && list.get(j + 1).getName() != null && (list.get(j).getSumCount()) > list.get(j + 1).getSumCount()) {
                     Country t = list.get(j);
                     list.set(j, list.get(j + 1));
                     list.set(j + 1, t);
                 }
-                if (list.get(i) != null && list.get(i).getName() != null && list.get(j).getCountUser() == list.get(j + 1).getCountUser()){
-                    if (list.get(j).getSumCount() > list.get(j + 1).getSumCount()) {
+                if (list.get(i) != null && list.get(i).getName() != null && list.get(j).getSumCount() == list.get(j + 1).getSumCount()){
+                    if (list.get(j).getCountUser() > list.get(j + 1).getCountUser()) {
                         Country t = list.get(j);
                         list.set(j, list.get(j + 1));
                         list.set(j + 1, t);
